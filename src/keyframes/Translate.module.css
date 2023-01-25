@@ -1,0 +1,62 @@
+:root {
+  --bar-size: 50px;
+}
+
+.root {
+  height: 100%;
+}
+
+@keyframes transition {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+    content: "0%";
+  }
+
+  25% {
+    background-color: green;
+    left: calc(100% - var(--bar-size));
+    top: 0px;
+    content: "25%";
+  }
+
+  50% {
+    background-color: blue;
+    left: calc(100% - var(--bar-size));
+    top: calc(100vh - var(--header-hight) - var(--footer-hight) - var(--bar-size));
+    content: "50%";
+  }
+
+  75% {
+    background-color: orange;
+    left: 0px;
+    top: calc(100vh - var(--header-hight) - var(--footer-hight) - var(--bar-size));
+    content: "75%";
+  }
+
+  100% {
+    background-color: yellow;
+    left: 0px;
+    top: 0px;
+    content: "100%";
+  }
+}
+
+.ball::before {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: '0%';
+  color: white;
+  width: var(--bar-size);
+  height: var(--bar-size);
+  background: #1e88e5;
+  animation-name: transition;
+  animation-duration: 4s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}

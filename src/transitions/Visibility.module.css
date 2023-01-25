@@ -1,0 +1,52 @@
+.root {
+  height: calc(100vh - var(--header-hight) - var(--footer-hight));
+  padding: 10px;
+  overflow: auto;
+  /* overflow: scroll; */
+  /* overflow: hidden; */
+  background-color: #c2c2c2;
+}
+
+.root::-webkit-scrollbar {
+  width: 1em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 100px;
+}
+
+.image {
+  background-color: #7cb342;
+  width: 100px;
+  height: 100px;
+  transition-property: width, height;
+  transition-duration: 1s;
+}
+
+.rounded {
+  border-radius: 10%;
+}
+
+.image:hover {
+  border-radius: 100%;
+  transition-property: border-radius;
+  transition-duration: 2s;
+}
+
+.effect:before {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: 'Hide';
+  transition-property: border-radius;
+  transition-duration: 2s;
+}

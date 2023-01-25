@@ -1,0 +1,67 @@
+:root {
+  --ball-hight--small: 10px;
+  --ball-hight--middle: 40px;
+  --ball-hight--large: 80px;
+}
+
+@keyframes bounce {
+
+  from,
+  to {
+    bottom: var(--footer-hight);
+    -webkit-animation-timing-function: ease-in-out;
+  }
+
+  50% {
+    bottom: calc(100vh - var(--header-hight) - var(--ball-hight--large));
+    -webkit-animation-timing-function: ease-in
+  }
+}
+
+.ball_small {
+  position: absolute;
+  width: var(--ball-hight--small);
+  height: var(--ball-hight--small);
+  bottom: var(--footer-hight);
+  left: 40%;
+  background: #d81b60;
+  border-radius: calc(var(--ball-hight--small) / 2);
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+
+.ball_middle {
+  position: absolute;
+  width: var(--ball-hight--middle);
+  height: var(--ball-hight--middle);
+  bottom: var(--footer-hight);
+  left: calc(70%);
+  background: #43a047;
+  border-radius: calc(var(--ball-hight--middle) / 2);
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+
+.ball_large {
+  position: absolute;
+  width: var(--ball-hight--large);
+  height: var(--ball-hight--large);
+  bottom: var(--footer-hight);
+  left: calc(100% - var(--ball-hight--large));
+  background: #1e88e5;
+  border-radius: calc(var(--ball-hight--large) / 2);
+  animation-name: bounce;
+  animation-duration: 3s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
