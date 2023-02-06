@@ -10,10 +10,11 @@ import { AppstoreOutlined } from "@ant-design/icons";
 
 const { Header, Footer, Sider, Content } = Layout;
 
-const pages = ["keyframes", "transition"];
+const pages = ["keyframes", "transition", "mediaQuery"];
 
 const Keyframes = React.lazy(() => import("./pages/Keyframes"));
 const Transitions = React.lazy(() => import("./pages/Transitions"));
+const MediaQuery = React.lazy(() => import("./pages/MediaQuery"));
 const NotFound = React.lazy(() => import("./pages/NotFound"));
 
 function App() {
@@ -84,11 +85,12 @@ function App() {
                 <Route path=":id" element={<Keyframes />} />
               </Route>
               <Route path="/transition" element={<Transitions />} />
+              <Route path="/mediaQuery" element={<MediaQuery />} />
               <Route path="/*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </main>
-        <footer className="footer">It is ©2018 Created by BT Inc</footer>
+        <footer className="footer">It is ©2018 Created by JSH</footer>
       </Layout>
     </>
   );

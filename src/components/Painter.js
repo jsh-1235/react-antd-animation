@@ -2,10 +2,6 @@ import styles from "./Painter.module.css";
 
 import React, { useState, useEffect } from "react";
 
-// import Bounce from "../keyframes/Bounce";
-// import Rotate from "../keyframes/Rotate";
-// import Translate from "../keyframes/Translate";
-
 export default function Painter({ ...props }) {
   const [html, setHTML] = useState("");
 
